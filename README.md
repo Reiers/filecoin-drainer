@@ -11,6 +11,8 @@ as is safely practical.
 
 
 
+
+
 ## ✨ What it does
 
 - Reads balances from your local Lotus (`lotus wallet balance`).
@@ -25,11 +27,14 @@ as is safely practical.
 
 
 
+
+
 ## ✅ Requirements
 
 - A **synced Lotus full node** with the `lotus` CLI available (tested on `v1.32.x`).
 - Standard Unix tools: `bash`, `awk`, `sed`, `grep`, `bc`, `timeout`, `jq`, `curl` (most distros ship these or install via package manager).
 - Network connectivity (only for optional explorer lookups; sends/confirmation happen via your local Lotus).
+
 
 
 
@@ -60,7 +65,7 @@ Drain two sources into one destination:
 
 ### Example (realistic output)
 
-```text
+```shell
 ./fildrainer.sh -d f1r7wdxfdncvllmkur6uakohq3vqv3fmmvtqzlbya -s f1zjdhcgx3jbbdsoo2ssj3yq44fzhpojrm4x2wb3a -s f3rboahog2hr3lh5js7tk2thszb2eugnkogyyrx7wdw27p7higpcuco7afyjnyit565d6d2yfqnvm3r5r7ybua 
 
 T H E  ⨎  D R A I N E R
@@ -101,6 +106,8 @@ Destination address: f1r7wdxfdncvllmkur6uakohq3vqv3fmmvtqzlbya
 
 
 
+
+
 ## ⚙️ Defaults & knobs
 
 These can be overridden via environment variables when you run the script:
@@ -132,6 +139,8 @@ WAIT_SEC=30 GAS_FEE_CAP_ATTO=600000 GAS_PREMIUM_ATTO=220000 ./fildrainer.sh -d <
 5. Final balance should be only dust (close to 0, but still large enough to pay for any pending message costs).
 
 This avoids *insufficient balance* and *SysErrOutOfGas* while keeping the address essentially empty.
+
+
 
 
 
