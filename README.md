@@ -35,7 +35,7 @@ as is safely practical.
 
 ## 🔧 Install
 
-1. Copy `fildrainer.sh` into a directory on your Lotus machine.
+1. Download or copy `fildrainer.sh` into a directory on your Lotus machine.
 2. Make it executable:
    ```bash
    chmod +x fildrainer.sh
