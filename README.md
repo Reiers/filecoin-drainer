@@ -9,7 +9,7 @@ as is safely practical.
 > With conservative gas settings and explicit on‑chain waits, **two addresses can take up to ~5 minutes** end‑to‑end
 > (≈ ~40s per sweep × 2 sweeps per address, plus network variability).
 
----
+
 
 ## ✨ What it does
 
@@ -23,7 +23,7 @@ as is safely practical.
 > The drainer **never** sends more than the source can safely afford after reserving gas.
 > If a send would risk *insufficient balance / out of gas*, it skips that send and moves on.
 
----
+
 
 ## ✅ Requirements
 
@@ -31,7 +31,7 @@ as is safely practical.
 - Standard Unix tools: `bash`, `awk`, `sed`, `grep`, `bc`, `timeout`, `jq`, `curl` (most distros ship these or install via package manager).
 - Network connectivity (only for optional explorer lookups; sends/confirmation happen via your local Lotus).
 
----
+
 
 ## 🔧 Install
 
@@ -43,7 +43,7 @@ as is safely practical.
 
 > You’ll upload the script yourself; this repo contains only documentation.
 
----
+
 
 ## 🏃‍♀️ Quick Start
 
@@ -99,7 +99,7 @@ Destination address: f1r7wdxfdncvllmkur6uakohq3vqv3fmmvtqzlbya
 
 > In practice, expect **up to ~5 minutes for two addresses** depending on node load and chain inclusion times.
 
----
+
 
 ## ⚙️ Defaults & knobs
 
@@ -133,7 +133,7 @@ WAIT_SEC=30 GAS_FEE_CAP_ATTO=600000 GAS_PREMIUM_ATTO=220000 ./fildrainer.sh -d <
 
 This avoids *insufficient balance* and *SysErrOutOfGas* while keeping the address essentially empty.
 
----
+
 
 ## 🔍 Troubleshooting
 
@@ -152,7 +152,7 @@ This avoids *insufficient balance* and *SysErrOutOfGas* while keeping the addres
 - **Abort mid‑run**  
   `Ctrl + C` cleanly aborts the current wait and exits. Partial sweeps that already broadcast will still land on‑chain.
 
----
+
 
 ## 🔒 Safety & scope
 
@@ -160,15 +160,8 @@ This avoids *insufficient balance* and *SysErrOutOfGas* while keeping the addres
 - The drainer never forces transactions that your balance can’t cover.  
 - You can dry‑run your gas settings by running the script and watching the proposed amounts before confirmation.
 
----
+
 
 ## 📜 License
 
 MIT — do what you want, no warranties.
-
----
-
-## 🙌 Credits
-
-Built around the Lotus CLI: `lotus wallet balance`, `lotus send`, and `lotus state wait-msg`.
-Thanks to the many test iterations that helped tune safe fee caps and reserves.
