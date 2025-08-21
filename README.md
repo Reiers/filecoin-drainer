@@ -1,4 +1,8 @@
+
+<img width="1422" height="516" alt="Skjermbilde 2025-08-21 kl  21 37 12" src="https://github.com/user-attachments/assets/ad58e581-c135-4266-90ea-63dffdf6e39d" />
+
 # THE ⨎ DRAINER (Lotus CLI)
+
 
 Drain Filecoin (FIL) balances from one or more **source** addresses to a **destination** address using your own
 **local Lotus node**. The script performs a **first sweep** (leaving a small reserve so gas can be paid),
